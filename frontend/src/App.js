@@ -611,7 +611,7 @@ function TranslatorScreen({ token, user, onLogout }) {
   const [error, setError] = useState("");
 
   // TTS audio url (if any)
-  const [ttsAudioUrl, setTtsAudioUrl] = useState("");
+  const [ttsAudioUrl] = useState("");
 
   // handle file selection
   const handleAudioChange = (e) => {

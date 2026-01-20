@@ -611,7 +611,7 @@ function TranslatorScreen({ token, user, onLogout }) {
   const [error, setError] = useState("");
 
   // TTS audio url (if any)
-  const [ttsAudioUrl] = useState("");
+
 
   // handle file selection
   const handleAudioChange = (e) => {
@@ -815,7 +815,7 @@ function TranslatorScreen({ token, user, onLogout }) {
             🔊 Listen to Translation (Browser Voice)
           </button>
 
-          {ttsAudioUrl && <audio controls autoPlay style={{ marginTop: 8, width: "100%" }} src={ttsAudioUrl} />}
+          {/* {ttsAudioUrl && <audio controls autoPlay style={{ marginTop: 8, width: "100%" }} src={ttsAudioUrl} />} */}
         </section>
       </main>
 

@@ -244,7 +244,10 @@ require("dotenv").config();
 const Translation = require("./models/Translation");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://yourapp.vercel.app",
+  credentials: true
+}));
 app.use(express.json());
 
 // ---- MongoDB Connection ----
@@ -444,5 +447,5 @@ app.get("/api/history", auth, async (req, res) => {
 // ----------------- Start server -----------------
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
-  console.log(`Server running at http://localhost:${PORT}`)
+  console.log(`Server running at ${PORT}`)
 );

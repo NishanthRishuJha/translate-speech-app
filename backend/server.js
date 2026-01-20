@@ -245,7 +245,9 @@ const Translation = require("./models/Translation");
 
 const app = express();
 app.use(cors({
-  origin: "https://yourapp.vercel.app",
+  origin: "https://translate-speech-app.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 app.use(express.json());

@@ -246,9 +246,15 @@ const Translation = require("./models/Translation");
 
 const app = express();
 app.use(cors({
-  origin: "https://translate-speech-app.vercel.app",
+origin: [
+    "https://translate-speech-app.vercel.app", // Vercel frontend
+    "http://localhost:3000"                    // local dev
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
 app.use(express.json());
 
 // ---- MongoDB Connection ----
